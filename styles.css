@@ -1,0 +1,123 @@
+
+
+/* Imagen de fondo */
+ body{
+    background-image:url(./img/nieveee.jpeg) ;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'Roboto Slab', serif;
+
+}  
+
+/* TARJETAS */
+/* contenedor padre */
+.contenedorClima{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    flex-wrap:wrap;
+    gap:20px
+
+}
+/* Contenedor Hijos */
+.tarjetaClima{
+width: 300px;
+border-radius: 6px;
+background-color:#9191e98b;
+opacity: 0,5;
+display: flex;
+flex-direction: column;
+align-items:center ;
+justify-content:center ;
+box-shadow: 22px 20px 18px -2px rgba(0,0,0,0.3);
+font-family: 'Poppins', sans-serif;
+color: white;
+font-size: 20px;
+}
+.tarjetaClima img{
+    width: 225px;
+    height: 226px;
+    
+}
+
+
+/* TÍTULO */
+
+h2{
+    text-align: center;
+    color:  #0b0b3cf6;
+    font-size: 40px;
+}
+h3{
+    color: #0b0b3cf6 ;
+}
+h4{
+    color:  white ;
+}
+strong{
+    color:  white;
+}
+/* FOOTER */
+footer{
+    background-color:#0b0b3c78 ;
+    border-radius: 8px;
+    display: grid;
+    grid-template-areas: 
+    "mapa legal redes";
+    height: 250px;
+    margin-top: 2rem;
+}
+.infolegal{
+    grid-area:legal ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
+}
+.redes{
+    grid-area: redes;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.redes i{
+    margin-left: 1rem;
+    font-size: 3rem;
+}
+.mapasitio{
+    grid-area: mapa;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+}
+.mapasitio li{
+    list-style: none;
+    margin: 15px;   
+}
+.mapasitio ul li a:hover{
+    color: orange;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 5px;
+}
+/* hacemos el footer responsive */
+@media (max-width:700px){
+    footer{
+        height: 600px;
+        grid-template-areas:
+        "legal" 
+        "mapa"
+        "redes"
+        ;
+    }
+}
